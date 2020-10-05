@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网易严选</title>
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1969802_0bprkvdoist.css">
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		html,body,.main{
+			width: 100%;
+			height: 100%;
+		}
+		.top{
+			width: 1518px;
+			height: 36px;
+			background-color: #333;
+			margin:0 auto;
+		}
+		.top_left > ul{
+			height: 36px;
+			width: 320px;
+			font-size: 12px;
+			line-height: 36px;
+			margin-left: 220px;
+			list-style: none;
+			float: left;
+		}
+		.top_right{
+			height: 36px;
+			line-height: 36px;
+			width: 500px;
+			float: left;
+			font-size: 12px;
+			margin-left: 300px;
+			list-style: none;
+			display: flex;
+			justify-content: space-between;
+			color: #ccc;
+		}
+		.r1:after{
+			height: 16px;
+			color: white;
+			content: '';
+			display: inline-block;
+			border-right: 1px solid #5c5c5c;
+			vertical-align: middle;
+			padding-right: 8px;
+		}
+		.r2:after{
+			height: 16px;
+			color: white;
+			content: '';
+			display: inline-block;
+			border-right: 1px solid #5c5c5c;
+			vertical-align: middle;
+			padding-right: 11px;
+		}
+		.r3:after{
+			height: 16px;
+			color: white;
+			content: '';
+			display: inline-block;
+			border-right: 1px solid #5c5c5c;
+			vertical-align: middle;
+			padding-right: 20px;
+		}
+		.r4:after{
+			height: 16px;
+			color: white;
+			content: '';
+			display: inline-block;
+			border-right: 1px solid #5c5c5c;
+			vertical-align: middle;
+			padding-right: 15px;
+		}
+		.r5:after{
+			height: 16px;
+			color: white;
+			content: '';
+			display: inline-block;
+			border-right: 1px solid #5c5c5c;
+			vertical-align: middle;
+			padding-right: 10px;
+		}
+		.r6:after{
+			height: 16px;
+			color: white;
+			content: '';
+			display: inline-block;
+			border-right: 1px solid #5c5c5c;
+			vertical-align: middle;
+			padding-right: 10px;
+		}
+		.r1,.r2,.r3,.r4,.r5,.r6,.r7{
+			flex: 1;
+		}
+		.a1{
+			text-decoration: none;
+		}
+		.a2{
+			text-decoration: none;
+		}
+		.header{
+			height: 140px;
+			width: 1518px;
+			position: relative;
+			z-index: 1;
+			margin: 0 auto;
+		}
+		.header_top{
+			width: 1090px;
+			height: 60%;
+			margin: 0 auto;
+			position: relative;
+		}
+		.header_top1{
+			width: 212px;
+			height: 60px;
+			position: absolute;
+			margin-top: 24px;
+			font-size: 42px;
+			color: #CC9756;
+			line-height: 60px;
+			text-align: center;
+			font-family: cursive;
+		}
+		.header_top2 > input{
+			width: 442px;
+			height: 38px;
+			padding:2px 0px 2px 38px;
+			border-top-left-radius: 19px;
+			border-bottom-left-radius: 19px;
+			font-size: 14px;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			z-index: 1;
+			display: block;
+			line-height: 38px;
+			border: 1px solid #CC9756;
+			overflow: hidden;
+			margin-left: 330px;
+			margin-top: 25px;
+			outline: none;
+		}
+		.header_top3{
+			width: 90px;
+			height: 43px;
+			background-color: #CC9756;
+			color: #FFFFFF;
+			box-sizing: border-box;
+			text-align: center;
+			line-height: 38px;
+			margin-left: 810px;
+			position: absolute;
+			margin-top: 25px;
+			border-top-right-radius: 19px;
+			border-bottom-right-radius: 19px;
+		}
+		.header_top3 > span{
+			color: #FFFFFF;
+			font-size: 16px;
+			cursor:pointer;
+			letter-spacing: 1px;
+		}
+		.header_top4{
+			width: 134px;
+			height: 22px;
+			padding: 8px 0px;
+			text-align: center;
+			position: relative;
+			cursor: pointer;
+			border: 1px solid #CC9756;
+			border-radius: 19px;
+			float: right;
+			top: 26px;
+			color: #FFFFFF;
+		}
+		.header_top4 > span{
+			color: #CC9756;
+			font-size: 16px;
+			cursor:pointer;
+			letter-spacing: 1px;
+			margin: -1px 0px 0px 5px;
+		}
+		.header_bottom{
+			width: 1090px;
+			height: 40%;
+			margin: 0 auto;
+			position: relative;
+		}
+		.header_bottom ul{
+			width: 1090px;
+			height: 100%;
+			display: flex;
+			justify-content: space-around;
+			position: absolute;
+		}
+		.header_bottom li{
+			width: 8%;
+			list-style: none;
+			font-size: 14px;
+			font-weight: bold;
+			cursor: pointer;
+			text-align: center;
+			line-height: 90px;
+		}
+		li:nth-child(2):hover{
+			border-bottom: 2px solid #CC9756;
+			color: #CC9756;
+		}
+		.li1{
+			border-bottom: 2px solid #CC9756;
+		    color: #CC9756;
+		}
+		li > .div2{
+			width: 1100px;
+			height: 410px;
+			background-color: white;
+			display: none;
+			float: left;
+			margin-top: -33px;
+			margin-left: -100px;
+			position: relative;
+		}
+		.div3{
+			width: 1020px;
+			height: 70px;
+			display: flex;
+			justify-content: center;
+			justify-content: space-between;
+			color: #333333;
+			font-size: 16px;
+		}
+		li:nth-child(2):hover>div{
+			display: block;
+		}
+		li:nth-child(3):hover>div{
+			display: block;
+		}
+		li:nth-child(3):hover{
+			border-bottom: 2px solid #CC9756;
+			color: #CC9756;
+		}
+		li:nth-child(4):hover>div{
+			display: block;
+		}
+		li:nth-child(4):hover{
+			border-bottom: 2px solid #CC9756;
+			color: #CC9756;
+		}
+		li:nth-child(5):hover>div{
+			display: block;
+		}
+		li:nth-child(5):hover{
+			border-bottom: 2px solid #CC9756;
+			color: #CC9756;
+		}
+		li:nth-child(6):hover>div{
+			display: block;
+		}
+		li:nth-child(6):hover{
+			border-bottom: 2px solid #CC9756;
+			color: #CC9756;
+		}
+		/* .footer{
+			width: 100%;
+			height: 549px;
+			background-color: coral;
+		}
+		.footer_top{
+			width: 70%;
+			height: 50%;
+			margin: 0 auto;
+			background-color: #ccc;
+		}
+		.footer_bottom{
+			width: 100%;
+			height: 50%;
+			background-color: #111;
+		} */
+		.content{
+			width: 100%;
+		}
+		.content_one{
+			width: 100%;
+			height: 550px;
+		}
+		.content_two{
+			width: 100%;
+			height: 750px;
+		}
+		.content_two > div{
+			width: 1090px;
+			height: 640px;
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			top: 0px;
+			bottom: 0px;
+			margin:auto;
+		}
+		.content_three{
+			width: 100%;
+			height: 550px;
+		}
+		.content_four{
+			width: 100%;
+			height: 550px;
+		}
+		.content_five{
+			width: 100%;
+			height: 650px;
+		}
+		.content_six{
+			width: 100%;
+			height: 650px;
+		}
+		.content_seven{
+			width: 100%;
+			height: 650px;
+		}
+		.content>div{
+			position: relative;
+		}
+		.item{
+			width: 1090px;
+			height: 510px;
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			top: 0px;
+			bottom: 0px;
+			margin:auto;
+		}
+		.image{
+			width: 1519px;
+			height: 420px;
+			margin: 0 auto;
+			background-color: yellow;
+			background-size: 100% 100%;
+			animation-name: lunbo;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+		}
+		.image:hover{
+			animation-play-state: paused;
+			cursor: pointer;
+		}
+		@keyframes lunbo{
+			0%{
+				background-image: url(./image/a.webp);
+			}
+			20%{
+				background-image: url(./image/b.webp);
+			}
+			40%{
+				background-image: url(./image/c.webp);
+			}
+			60%{
+				background-image: url(./image/d.webp);
+			}
+			100%{
+				background-image: url(./image/a.webp);
+			}
+		}
+		.item1{
+			width: 1090px;
+			height: 48px;
+			padding: 0px 0px 20px;
+		}
+		.item2{
+			width: 265px;
+			height: 365px;
+			float: left;
+		}
+		.item3{
+			width: 265px;
+			height: 365px;
+			float: left;
+			margin-left: 10px;
+		}
+		.item4{
+			width: 265px;
+			height: 365px;
+			float: left;
+			margin-left: 10px;
+		}
+		.item5{
+			width: 265px;
+			height: 365px;
+			float: left;
+			margin-left: 10px;
+		}
+		.item2 > div{
+			width: 265px;
+			height: 265px;
+			background-color: #F4F4F4;
+			background-image: url(./image/1.webp);
+			transition: all 1s linear;
+		}
+		.item2 > div:hover{
+			width: 275px;
+			height: 275px;
+			background-color: red;
+		}
+		.item3 > div{
+			width: 265px;
+			height: 265px;
+			background-color: #F4F4F4;
+			background-image: url(./image/2.webp);
+			transition: all 1s linear;
+		}
+		.item3>div:hover{
+			width: 275px;
+			height: 275px;
+			background-color: red;
+		}
+		.item4 > div{
+			width: 265px;
+			height: 265px;
+			background-color: #F4F4F4;
+			background-image: url(./image/3.webp);
+			transition: all 1s linear;
+		}
+		.item4 > div:hover{
+			width: 275px;
+			height: 275px;
+			background-color: red;
+		}
+		.item5 > div{
+			width: 265px;
+			height: 265px;
+			background-color: #F4F4F4;
+			background-image: url(./image/4.webp);
+			transition: all 1s linear;
+		}
+		.item5 > div:hover{
+			width: 275px;
+			height: 275px;
+			background-color: red;
+		}
+		.bd{
+			width: 265px;
+			height: 92px;
+			position: absolute;
+			margin-top: 275px;
+		}
+		.ptags{
+			height: 20px;
+			width: 200px;
+			color: #fff;
+			left: 0px;
+			right: 0px;
+			margin: auto;
+			overflow: hidden;
+		}
+		.tag{
+			width: 70px;
+			height: 20px;
+			line-height: 20px;
+			color: #fff!important;
+			padding: 0 5px;
+			background-color: #e36844;
+			font-size: 12px;
+			left: 0px;
+			right: 0px;
+			margin: auto;
+			position: absolute;
+			text-align: center;
+		}
+		.tag3{
+			width: 58px;
+			height: 20px;
+			line-height: 20px;
+			color: #fff!important;
+			padding: 0 5px;
+			background-color: #e36844;
+			font-size: 12px;
+			/*position: absolute;*/
+			float: left;
+			margin-left: 22px;
+			text-align: center;
+		}
+		.tag4{
+			width: 70px;
+			height: 20px;
+			line-height: 20px;
+			color: #fff!important;
+			padding: 0 5px;
+			background-color: #F28F2D;
+			font-size: 12px;
+			/*position: absolute;*/
+			float: left;
+			margin-left: 5px;
+			text-align: center;
+		}
+		.tag1{
+			width: 156px;
+			height: 37px;
+			color: #333333;
+			font-size: 13px;
+			cursor: pointer;
+			font-weight: bold;
+			left: 0px;
+			right: 0px;
+			margin: auto;
+			position: absolute;
+			margin-top: 5px;
+			text-align: center;
+		}
+		.tag5{
+			width: 166px;
+			height: 37px;
+			color: #333333;
+			font-size: 13px;
+			cursor: pointer;
+			font-weight: bold;
+			margin: 0 auto 4px;
+			left: 0px;
+			right: 0px;
+			margin: auto;
+			position: absolute;
+			margin-top: 5px;
+			text-align: center;
+		}
+		.tag5>p:last-child{
+			left: 0px;
+			right: 0px;
+			margin: auto;
+			position: absolute;
+		}
+		.tag1:hover{
+			color: #CC9756;
+		}
+		.tag5:hover{
+			color: #CC9756;
+		}
+		.tag2{
+			height: 20px;
+			font-size: 13px;
+			color: #D4282D;
+			display: block;
+			text-align: center;
+			margin-top: 38px;
+		}
+		.biaoti1{
+			width: 244px;
+			height: 38px;
+		}
+		.name1{
+			font-size: 28px;
+			color: #333333;
+			float: left;
+			line-height: 1;
+			margin-right: 20px;
+			font-weight:700;
+			list-style: none;
+		}
+		.name1:hover{
+			color: #CC9756;	
+		}
+		.name2{
+			width: 212px;
+			height: 27px;
+			font-size: 14px;
+			color: #333333;
+			padding: 13px 0px 0px;
+			position: absolute;
+			display: inline-block;
+			line-height: 1;
+			box-sizing: border-box;
+		}
+		.name3{
+			width: 71px;
+			height: 28px;
+			font-size: 14px;
+			color: #333333;
+			cursor: pointer;
+			display: inline-block;
+			float: right;
+			text-decoration: none;
+		}
+		.name3:hover{
+			color: #CC9756;
+		}
+		/* .guding1{
+			position: fixed;
+			/*top: 62px!important;*/
+			/* width: 110px;
+			height: 360px;
+			border:1px solid #E2DED6;
+			left: 50%;
+			margin-left: -680px;
+			z-index: 1px;
+			background: #ccc;
+			border-radius: 4px;
+			overflow: hidden;
+			display: block;
+			opacity: 1;
+			will-change: transform;
+			transform: translateZ(0);
+		} */ 
+		.name4{
+			width: 56px;
+			height: 27px;
+			font-size: 14px;
+			color: #B4A078;
+			padding: 13px 0px 0px;
+			position: absolute;
+			display: inline-block;
+			line-height: 1;
+			box-sizing: border-box;
+		}
+		.name4{
+			border-bottom: 2px solid #B4A078;
+		}
+		.name5{
+			width: 212px;
+			height: 27px;
+			font-size: 14px;
+			color: #333333;
+			padding: 13px 0px 0px;
+			position: absolute;
+			display: inline-block;
+			line-height: 1;
+			box-sizing: border-box;
+			padding-left: 100px;
+		}
+		.popular1{
+			width: 390px;
+			height: 570px;
+			float: left;
+		}
+		.popular2{
+			width: 225px;
+			height: 280px;
+			float: left;
+			margin-left: 7px;
+			margin-top: 5px;
+		}
+		.popular3{
+			width: 223px;
+			height: 180px;
+			background-image: url(./image/1.webp);
+			background-size: 100% 100%;
+			transition: all 1s linear;
+		}
+		.popular3:hover{
+			width: 230px;
+			height: 188px;
+			background-color: red;
+		}
+		.popular4{
+			width: 223px;
+			height: 95px;
+		}
+		.pop2{
+			width: 390px;
+			height: 360px;
+			background-image: url(./image/p1.webp);
+			background-size: 100% 100%;
+			transition: all 1s linear;
+		}
+		.pop2:hover{
+			width: 400px;
+			height: 370px;
+			background-color: blue;
+		}
+		.pop3{
+			width: 390px;
+			height: 123px;
+			border-top: 1px solid black;
+			
+		}
+		.pop4{
+			width: 200px;
+			height: 20px;
+			/* background-color: red; */
+			text-align: center;
+			margin-bottom: 10px;
+			margin-top: 10px;
+			color: #fff;
+			margin: 0 auto 3px;
+			margin-top: 5px;
+		}
+		.tag11{
+			width: 200px;
+			height: 20px;
+			font-size: 0;
+			color: #fff;
+			margin: 0 auto 3px;
+			overflow: hidden;
+			text-align: center;
+			display: block;
+		}
+		.tag8{
+			width: 94px;
+			height: 20px;
+			color: #fff!important;
+			background-color: #e36844;
+			font-size: 12px;
+			text-align: center;
+			height: 20px;
+			line-height: 20px;
+			padding: 0 5px;
+			display: inline-block;
+			box-sizing: border-box;
+
+		}
+		.tag12{
+			width: 136px;
+			height: 40px;
+			margin: 0 auto 4px;
+			line-height: 20px;
+			overflow: hidden;
+		}
+		.tag9{
+			width: 134px;
+			height: 37px;
+			box-sizing: border-box;
+			color: #333;
+			font-size: 13px;
+			cursor: pointer;
+			font-weight: bold;
+			position: absolute;
+			text-align: center;
+			line-height: 20px;
+		}
+		.tag13{
+			width: 223px;
+			height: 25px;
+			font-size: 13px;
+			line-height: 13px;
+			color: #d4282d;
+			padding: 1px 0 9px;
+			margin: 0;
+			text-align: center;
+		}
+		.footer{
+			width: 1518px;
+			height: 549px;
+			margin: 0 auto;
+		}
+		.footer_top{
+			width: 70%;
+			height: 50%;
+			margin: 0 auto;
+		}
+		.footer_bottom{
+			width: 100%;
+			height: 50%;
+			background-color: #111;
+			overflow: hidden;
+		}
+		.footer_top1{
+			width: 354px;
+			height: 170px;
+			float: left;
+			margin-top: 50px;
+			position: relative;
+		}
+		.footer_top2{
+			width: 354px;
+			height: 170px;
+			float: left;
+			margin-top: 50px;
+			position: relative;
+		}
+		.footer_top3{
+			width: 354px;
+			height: 170px;
+			float: left;
+			margin-top: 50px;
+
+		}
+		.footer_top > div{
+			text-align: center;
+		}
+		.spana{
+			width: 250px;
+			height: 100px;
+			margin: auto;
+			/* top: 0px;
+			bottom: 0px; */
+			margin-top: 15px;
+			left: 0px;
+			right: 0px;
+			position: absolute;
+			background-image: url(./image/kf.png);
+			background-size: 100% 100%;
+		}
+		.pa,.pb,.pc{
+			padding-top: 20px;
+		}
+		.footer_bottom > ul{
+			width: 1100px;
+			height: 60px;
+			margin: 0 auto;
+			margin-top: 40px;
+			display: flex;
+			justify-content: space-between;
+			font-size: 20px;
+			list-style: none;
+			color: white;
+			border-bottom: 1px solid #666;
+		}
+		.footer_bottom > div{
+			width: 1100px;
+			height: 180px;
+			margin: 0 auto;
+		}
+		.pd>p:nth-child(1){
+			font-size: 12px;
+			color: #999;
+			display: flex;
+			justify-content: center;
+		}
+		.pd>p:nth-child(2){
+			font-size: 12px;
+			color: #999;
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			padding-top: 15px;
+		}
+		.pd>p:nth-child(2):hover{
+			color: white;
+		}
+		.pd>p:nth-child(1):hover{
+			color: white;
+		}
+		.itm1{
+			width: 200px;
+			height: 440px;
+			float: left;
+			background-image: url(./image/3.webp);
+			background-size: 100% 100%;
+			transition: all 1s linear;
+		}
+		.itm1:hover{
+			width: 201px;
+			height: 450px;
+			background-color: black;
+		}
+		.itm2{
+			width: 443px;
+			height: 218px;
+			float: left;
+			border: 0.5px solid #999;
+		}
+		.itm2>div:nth-child(1){
+			width: 150px;
+			height: 218px;
+			background-image: url(./image/2.webp);
+			background-size: 100% 100%;
+			display: inline-block;
+			transition: all 1s linear;
+		}
+		.itm2>div:nth-child(1):hover{
+			width: 160px;
+			height: 235px;
+
+		}
+		.itm2>div:nth-child(2){
+			width: 288px;
+			height: 218px;
+			display: inline-block;
+			position: absolute;
+			/* text-align: center; */
+		}
+		.itm3{
+			width: 120px;
+			height: 10px;
+			border-top-left-radius: 20px;
+			border-bottom-left-radius: 20px;
+			float: left;
+			margin-top: 20px;
+			margin-left: 60px;
+		}
+		.itm4{
+			width: 50px;
+			height: 10px;
+			background-color: white;
+			border-top-right-radius: 20px;
+			border-bottom-right-radius: 20px;
+			float: left;
+			margin-top: 20px;
+		}
+		.itm5{
+			width: 200px;
+			height: 440px;
+			float: left;
+			background-image: url(./image/t3.webp);
+			background-size: 100% 100%;
+		}
+		.itm6{
+			width: 687px;
+			height: 440px;
+			float: left;
+		}
+		.itm11{
+			width: 200px;
+			height: 440px;
+			float: right;
+			font-size: 20px;
+			color: white;
+		}
+		.itm6-top{
+			width:685px;
+			height: 100px;
+			font-size: 18px;
+			border: 1px solid #999;
+		}
+		.itm6-bottom{
+			width: 687px;
+			height: 340px;
+		}
+		.itm7-top{
+			float: right;
+			font-size: 14px;
+			margin-top: 50px;
+		}
+		.itm8{
+			width: 341px;
+			height: 168px;
+			border: 1px solid #999;
+			float: left;
+		}
+		.itm8>div:nth-child(1){
+			width: 111px;
+			height: 130px;
+			float: left;
+			background-image: url(./image/t2.webp);
+			background-size: 100% 100%;
+			margin-top: 20px;
+			margin-left: 10px;
+		}
+		.item1>ul{
+			width: 571px;
+			height: 28px;
+			font-size: 14px;
+			color: #333333;
+			cursor: pointer;
+			display: inline-block;
+			float: right;
+			text-decoration: none;
+		}
+		.con0{
+			width: 1090px;
+			height: 200px;
+			background-color: blue;
+			background-image: url(./image/t4.webp);
+			background-size: 100% 100%;
+		}
+		.con1{
+			width: 362px;
+			height: 180px;
+			background-color: yellow;
+			float: left;
+			border: 1px solid #999;
+			box-sizing: border-box;
+			background-image: url(./image/c1.webp);
+			background-size: 100% 100%;
+		}
+		.con11{
+			width: 362px;
+			height: 180px;
+			background-color: yellow;
+			float: left;
+			border: 1px solid #999;
+			box-sizing: border-box;
+			background-image: url(./image/c2.webp);
+			background-size: 100% 100%;
+		}
+		.con111{
+			width: 362px;
+			height: 180px;
+			background-color: yellow;
+			float: left;
+			border: 1px solid #999;
+			box-sizing: border-box;
+			background-image: url(./image/c3.webp);
+			background-size: 100% 100%;
+		}
+		.con2{
+			width: 1090px;
+			height: 20px;
+			float: left;
+			display: flex;
+			justify-content: space-around;
+		}
+		.con2>ul{
+			list-style: none;
+			display: flex;
+			justify-content: space-between;
+		}
+		.cona{
+			width: 700px;
+			height: 400px;
+			background-color: red;
+			float: left;
+			margin-top: 10px;
+			background-image: url(./image/z1.webp);
+			background-size: 100% 100% ;
+		}	
+		.conb{
+			width: 380px;
+			height: 195px;
+			background-color: blue;
+			float: left;
+			margin-top: 10px;
+			margin-left: 10px;
+			background-image: url(./image/z2.webp);
+			background-size: 100% 100% ;
+		}
+		.conc{
+			width: 352px;
+			height: 300px;
+			background-color: red;
+			float: left;
+			margin-left: 10px;
+			background-image: url(./image/con1.webp);
+			background-size: 100% 100% ;
+		}
+		.conf{
+			width: 352px;
+			height: 300px;
+			background-color: red;
+			float: left;
+			margin-left: 10px;
+			background-image: url(./image/con2.webp);
+			background-size: 100% 100% ;
+		}
+		.cong{
+			width: 352px;
+			height: 300px;
+			background-color: red;
+			float: left;
+			margin-left: 10px;
+			background-image: url(./image/con3.webp);
+			background-size: 100% 100% ;
+		}
+		.cond{
+			width: 340px;
+			height: 180px;
+			background-color: white;
+			float: left;
+			margin-left: 20px;
+			margin-top: -40px;
+			text-align: center;
+			padding-top: 50px;
+			font-size: 14px;
+		}
+		.pf{
+			width: 100px;
+			height: 100px;
+			background-image: url(./image/skm.PNG);
+			background-size: 100% 100%;
+			margin: 0 auto;
+			margin-top: 10px;
+		}
+		.xf5{
+			width: 130px;
+			height: 320px;
+			float: left;
+			margin-left: 3px;
+		}
+		.xf6{
+			width: 130px;
+			height: 50px;
+			color: #333;
+			font-weight: normal;
+		}
+		.dd1{
+			font-size: 14px;
+			color: black;
+			font-weight: bold;
+		}
+		.dd2{
+			font-size: 12px;
+			color: #444;
+			font-weight: normal;
+		}
+		.ii1{
+			width: 150px;
+			height: 10px;
+			background-color: pink;
+			border-top-left-radius: 20px;
+			border-bottom-left-radius: 20px;
+			float: left;
+			margin-top: 10px;
+		}
+		.ii2{
+			width: 50px;
+			height: 8px;
+			border: 1px solid pink;
+			border-top-right-radius: 20px;
+			border-bottom-right-radius: 20px;
+			float: left;
+			margin-top: 10px;
+		}
+		.dd7{
+			width: 80px;
+			font-size: 11px;
+			color: #888;
+			float: left;
+			margin-top: 6px;
+			font-weight: normal;
+		}
+		.dd3{
+			color: red;
+			font-size: 12px;
+			display: block;
+			font-weight: normal;
+			float: left;
+			margin-top: 5px;
+		}
+		.dd4{
+			font-size: 20px;
+			color: red;
+			float: left;
+		}
+		.dd5{
+			font-size: 12px;
+			color: #888;
+			font-weight: normal;
+			margin-top: 28px;
+			margin-left: 100px;
+			position: absolute;
+			text-decoration: line-through;
+		}
+		.dd8{
+			width: 120px;
+			height: 30px;
+			background-color: red;
+			font-size: 20px;
+			color: white;
+			margin-top: 80px;
+			text-align: center;
+			font-weight: normal;
+		}
+		.tt1{
+			font-weight: bold;
+			margin-top: 20px;
+		}
+		.tt2{
+			color: red;
+			font-size: 14px;
+			float: left;
+		}
+		.tt3{
+			font-size: 24px;
+			color: red;
+			font-weight: bold;
+			margin-top: -8px;
+		}
+		.tt4{
+			font-size: 14px;
+			color: #999;
+			text-decoration: line-through;
+		}
+		.tt5{
+			width: 100px;
+			height: 30px;
+			background-color: red;
+			color: white;
+			text-align: center;
+			margin-left: 120px;
+			margin-top: 15px;
+			line-height: 30px;
+		}
+		.itm12{
+			width: 200px;
+			height: 218px;
+			border: 1px solid black;
+		}
+		.p11{
+			font-size: 16px;
+			color: black;
+			margin-top: 50px;
+		}
+		.p12{
+			font-size: 14px;
+			color: black;
+			float: right;
+		}
+		.p13{
+			font-size: 14px;
+			color: black;
+			font-weight: normal;
+			margin-top: 30px;
+		}
+		.p14{
+			color: red;
+			font-size: 14px;
+		}
+		.q1{
+			width: 180px;
+			height: 25px;
+			background-color: red;
+			color: white;
+			font-size: 14px;
+			text-align: center;
+			line-height: 25px;
+			display: block;
+		}
+		.q2{
+			font-size: 14px;
+			font-weight: bold;
+			text-align: center;
+			display: block;
+		}
+		.conn2{
+			width: 1090px;
+			height: 15px;
+			float: left;
+			display: flex;
+			justify-content: space-around;
+			margin-top: 15px;
+		}
+		.conn3{
+			width: 1090px;
+			height: 15px;
+			float: left;
+			display: flex;
+			justify-content: space-around;
+			margin-top: 15px;
+		}
+		.q4{
+			font-size: 14px;
+			font-weight: bold;
+			text-align: center;
+			display: block;
+			color: red;
+		}
+		.cc1{
+			color: #CC9756;
+			font-size: 12px;
+			float: right;
+		}
+		/* .pb{
+			float: left;
+			width: 200px;
+			height: 50px;
+		} */
+		/* .pbbb{
+			background-image: url(./image/pb.png);
+			background-size: 100% 100%;
+			float: left;
+		} */
+</style>
+</head>
+<body>
+	<div class="main">
+		<div class="top">
+			<div class="top_left">
+				<ul><li><a href="" style="color:#CC9756;">关于响应国家全面推广电子普通发票的公告</a></li></ul>
+			</div>
+			<div class="top_right">
+				<div class="r1">登录/注册</div>
+				<div class="r2">我的订单</div>
+				<div class="r3">会员</div>
+				<div class="r4">甄选家</div>
+				<div class="r5">企业采购</div>
+				<div class="r6">客户服务</div>
+				<div class="r7">APP</div>
+			</div>
+		</div>
+		<div class="header">
+			<div class="header_top">
+				<div class="header_top1">网易严选</div>
+				<div class="header_top2"><input type="text" placeholder="夏凉解暑神器,风扇49元起"></div>
+				<div class="header_top3">
+					<span>搜索</span>
+				</div>
+				<div class="header_top4">
+					<span>购物车</span>
+					<div>
+					<i class="iconfont icon-gouwuche" style="position: absolute;color: #CC9756;font-size: 25px;margin-left: -55px;margin-top: -22px;"></i></div>
+				</div>
+			</div>
+			<div class="header_bottom">
+				<ul>
+					<li class="li1">首页
+						<div class="div1"></div>
+					</li>
+					<li>居家生活
+						<div class="div2">
+							<div class="div3">
+								<div>口碑好物</div>
+								<div>床上用品</div>
+								<div>家居家装</div>
+								<div>收纳日用</div>
+								<div>家具饰品</div>
+								<div>厨房用品</div>
+								<div>餐具水局</div>
+								<div>宠物生活</div>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+						</div>
+					</li>
+					<li>服饰鞋包
+						<div class="div2">
+							<div class="div3">
+								<div>口碑好物</div>
+								<div>床上用品</div>
+								<div>家居家装</div>
+								<div>收纳日用</div>
+								<div>家具饰品</div>
+								<div>厨房用品</div>
+								<div>餐具水局</div>
+								<div>宠物生活</div>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+						</div>
+					</li>
+					<li>美食酒水
+						<div class="div2">
+							<div class="div3">
+								<div>口碑好物</div>
+								<div>床上用品</div>
+								<div>家居家装</div>
+								<div>收纳日用</div>
+								<div>家具饰品</div>
+								<div>厨房用品</div>
+								<div>餐具水局</div>
+								<div>宠物生活</div>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+						</div>
+					</li>
+					<li>个护清洁
+						<div class="div2">
+							<div class="div3">
+								<div>口碑好物</div>
+								<div>床上用品</div>
+								<div>家居家装</div>
+								<div>收纳日用</div>
+								<div>家具饰品</div>
+								<div>厨房用品</div>
+								<div>餐具水局</div>
+								<div>宠物生活</div>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+						</div>
+					</li>
+					<li>母婴亲子
+						<div class="div2">
+							<div class="div3">
+								<div>口碑好物</div>
+								<div>床上用品</div>
+								<div>家居家装</div>
+								<div>收纳日用</div>
+								<div>家具饰品</div>
+								<div>厨房用品</div>
+								<div>餐具水局</div>
+								<div>宠物生活</div>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+							<div class="xf5">
+								<p class="xf6">口碑好物</p>
+								<p class="xf6">抑菌防螨</p>
+								<p class="xf6">春夏好物</p>
+								<p class="xf6">主题床品</p>
+								<p class="xf6">北欧原木</p>
+								<p class="xf6">厨房爆款</p>
+							</div>
+						</div>
+					</li>
+					<li>运动旅行</li>
+					<li>数码家电</li>
+					<li>严选全球</li>
+					<li>为你严选</li>
+					<li>众筹</li>
+				</ul>
+			</div>
+		</div>
+		<div class="image"></div>
+		<div class="content">
+			<div class="content_one">
+				<div class="item">
+					<div class="item1">
+						<div class="biaoti1">
+							<a href="https://you.163.com/item/newItem?_stat_area=newItem_link&_stat_referer=index"><h3 class="name1">新品首发</h3></a>
+							<small class="name2">为你寻觅世间好物</small>
+						</div>
+						<a href="https://you.163.com/item/newItem?_stat_area=newItem_link&_stat_referer=index" class="name3">更多新品 ></a>
+					</div>
+					<div class="item2"><div>
+						<div class="bd">
+							<div class="ptags">
+								<span class="tag">新品限时购</span>
+							</div>
+							<span class="tag1">守护你的发际线,黑芝麻王100克</span>
+							<span class="tag2">¥29.9</span>
+						</div>
+					</div></div>
+					<div class="item3"><div>
+						<div class="bd">
+							<div class="ptags">
+								<span class="tag3">杭州制造</span>
+								<span class="tag4">新品限时购</span>
+							</div>
+							<span class="tag5">切丝擦丝切蒜辅食 家用食物多功能料理机</span>
+							<span class="tag2">¥129</span>
+
+						</div>
+					</div></div>
+					<div class="item4"><div>
+						<div class="bd">
+							<div class="ptags">
+								<span class="tag">新品限时购</span>
+							</div>
+							<span class="tag5">
+								万古不易,锁味增鲜 日本万古烧饭父0.5L
+							</span>
+							<span class="tag2">¥28.9</span>
+
+						</div>
+					</div></div>
+					<div class="item5"><div>
+						<div class="bd">
+							<div class="ptags">
+								<span class="tag">新品限时购</span>
+							</div>	
+							<span class="tag5">
+								女司机洗天机平底鞋 多功能洗鞋机
+							</span>
+							<span class="tag2">¥134</span>
+						</div>
+					</div></div>
+				</div>
+				<div class="guding">
+				<ul class="guding1" >
+					<li class="guding2"></li>
+				</ul>
+				</div>
+			</div>
+			<div class="content_two">
+				<div class="item">
+					<div class="item1">
+						<div class="biaoti1">
+							<a href="https://you.163.com/item/newItem?_stat_area=newItem_link&_stat_referer=index"><h3 class="name1">人气推荐</h3></a>
+							<small class="name4">编辑推荐</small>
+							<small class="name5">热销总榜</small>
+						</div>
+						<a href="https://you.163.com/item/newItem?_stat_area=newItem_link&_stat_referer=index" class="name3">更多推荐></a>
+					</div>
+					<div class="popular1">
+						<div class="pop2"></div>
+						<div class="pop3">
+							<div class="pop4"><span>换购</span><span>每满150减20倦</span></div>
+							<h4 class="tag12"><span class="tag9">清新英国莉香发神经咖啡店</span></h4>
+							<p class="tag13"><span class="tag10"></span></p>	
+						</div>
+					</div>
+					<div class="popular2">
+						<div class="popular3"></div>
+						<div class="popular4">
+							<div class="tag11"><span class="tag8">每满150减20劵</span></div>
+							<h4 class="tag12"><span class="tag9">清新英国莉香发神经咖啡店</span></h4>
+							<p class="tag13"><span class="tag10">¥49.9</span></p>				
+						</div>
+					</div>
+					<div class="popular2">
+						<div class="popular3"></div>
+						<div class="popular4">
+							<div class="tag11"><span class="tag8">每满150减20劵</span></div>
+							<h4 class="tag12"><span class="tag9">清新英国莉香发神经咖啡店</span></h4>
+							<p class="tag13"><span class="tag10">¥49.9</span></p>
+						</div>
+					</div>
+					<div class="popular2">
+						<div class="popular3"></div>
+						<div class="popular4">
+							<div class="tag11"><span class="tag8">每满150减20劵</span></div>
+							<h4 class="tag12"><span class="tag9">清新英国莉香发神经咖啡店</span></h4>
+							<p class="tag13"><span class="tag10">¥49.9</span></p>
+						</div>
+					</div>
+					<div class="popular2">
+						<div class="popular3"></div>
+						<div class="popular4">
+							<div class="tag11"><span class="tag8">每满150减20劵</span></div>
+							<h4 class="tag12"><span class="tag9">清新英国莉香发神经咖啡店</span></h4>
+							<p class="tag13"><span class="tag10">¥49.9</span></p>
+						</div>
+					</div>
+					<div class="popular2">
+						<div class="popular3"></div>
+						<div class="popular4">
+							<div class="tag11"><span class="tag8">每满150减20劵</span></div>
+							<h4 class="tag12"><span class="tag9">清新英国莉香发神经咖啡店</span></h4>
+							<p class="tag13"><span class="tag10">¥49.9</span></p>
+						</div>
+					</div>
+					<div class="popular2">
+						<div class="popular3"></div>
+						<div class="popular4">
+							<div class="tag11"><span class="tag8">每满150减20劵</span></div>
+							<h4 class="tag12"><span class="tag9">清新英国莉香发神经咖啡店</span></h4>
+							<p class="tag13"><span class="tag10">¥49.9</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content_three">
+				<div class="item">
+					<div class="item1">
+						<div class="biaoti1">
+							<a href="https://you.163.com/item/newItem?_stat_area=newItem_link&_stat_referer=index"><h3 class="name1">限时购</h3></a>
+						</div>
+						<a href="https://you.163.com/item/newItem?_stat_area=newItem_link&_stat_referer=index" class="name3">更多抢购 ></a>
+					</div>
+					<div class="itm1"></div>
+					<div class="itm2">
+						<div></div>
+						<div class="dd1">100年渗透，麦饭石天然矿泉水 330ml*24瓶 欢迎抢购
+							<p class="dd2">麦饭石深层裂隙水，滴滴珍贵</p>
+							<div class="ii1"></div>
+							<div class="ii2"></div>
+							<p class="dd7">还剩167件</p>
+							<p class="dd3">限时价</p>
+							<p class="dd4">¥158</p>
+							<p class="dd5">¥95</p>
+							<div class="dd8">立即抢购</div>
+						</div>
+					</div>
+					<div class="itm2">
+						<div></div>
+						<div class="dd1">100年渗透，麦饭石天然矿泉水 330ml*24瓶 欢迎抢购
+							<p class="dd2">麦饭石深层裂隙水，滴滴珍贵</p>
+							<div class="ii1"></div>
+							<div class="ii2"></div>
+							<p class="dd7">还剩167件</p>
+							<p class="dd3">限时价</p>
+							<p class="dd4">¥155</p>
+							<p class="dd5">¥77</p>
+							<div class="dd8">立即抢购</div>
+						</div>
+						
+					</div>
+					<div class="itm2">
+						<div></div>
+						<div class="dd1">100年渗透，麦饭石天然矿泉水 330ml*24瓶 欢迎抢购
+							<p class="dd2">麦饭石深层裂隙水，滴滴珍贵</p>
+							<div class="ii1"></div>
+							<div class="ii2"></div>
+							<p class="dd7">还剩167件</p>
+							<p class="dd3">限时价</p>
+							<p class="dd4">¥458</p>
+							<p class="dd5">¥15</p>
+							<div class="dd8">立即抢购</div>
+						</div>
+					</div>
+					<div class="itm2">
+						<div></div>
+						<div class="dd1">100年渗透，麦饭石天然矿泉水 330ml*24瓶 欢迎抢购
+							<p class="dd2">麦饭石深层裂隙水，滴滴珍贵</p>
+							<div class="ii1"></div>
+							<div class="ii2"></div>
+							<p class="dd7">还剩167件</p>
+							<p class="dd3">限时价</p>
+							<p class="dd4">¥598</p>
+							<p class="dd5">¥125</p>
+							<div class="dd8">立即抢购</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="content_four">
+				<div class="item">
+					<div class="item1">
+						<div class="biaoti1">
+							<a href="https://you.163.com/item/newItem?_stat_area=newItem_link&_stat_referer=index"><h3 class="name1">福利社</h3></a>
+						</div>
+						<a href="https://you.163.com/item/newItem?_stat_area=newItem_link&_stat_referer=index" class="name3">查看福利 ></a>
+					</div>
+					<div class="itm5"></div>
+					<div class="itm6">
+						<div class="itm6-top">今日特价
+							<div class="itm7-top">查看全部</div>
+						</div>
+						<div class="itm6-bottom">
+							<div class="itm8">
+								<div></div>
+								<div class="tt1">【丁磊直播款】多功能人体工学转椅</div>
+								<p class="tt2">限时价¥</p>
+								<p class="tt3">1199</p>
+								<p class="tt4">¥1011</p>
+								<div class="tt5">立即抢购</div>
+							</div>
+							<div class="itm8">
+								<div></div>
+								<div class="tt1">全面助力发育，全价幼猫粮5.4kg低价出售</div>
+								<p class="tt2">限时价¥</p>
+								<p class="tt3">1079</p>
+								<p class="tt4">¥1389</p>
+								<div class="tt5">立即抢购</div>
+							</div>
+							<div class="itm8">
+								<div></div>
+								<div class="tt1">唇齿留香，五常有机稻花香米5kg</div>
+								<p class="tt2">限时价¥</p>
+								<p class="tt3">1089</p>
+								<p class="tt4">¥1009</p>
+								<div class="tt5">立即抢购</div>
+							</div>
+							<div class="itm8">
+								<div></div>
+								<div class="tt1">可爱健康不要胖，全价成猫粮9.9kg</div>
+								<p class="tt2">限时价¥</p>
+								<p class="tt3">2999</p>
+								<p class="tt4">¥1989</p>
+								<div class="tt5">立即抢购</div>
+							</div>
+						</div>
+					</div>
+					<div class="itm11">
+						<div class="itm12">
+							<p class="p11">最近囤货</p>
+							<p class="p12">全部 ></p>
+							<div class="p15"></div>
+							<p class="p13">本色抑菌懒人布</p>
+							<p class="p14">¥119</p>
+							<p class="p13">本色抑菌懒人布</p>
+							<p class="p14">¥119</p>
+						</div>
+						<div class="itm12">
+							<p class="p11">今日买赠</p>
+							<p class="p12">全部 ></p>
+							<p class="p13">本色抑菌懒人布</p>
+							<p class="p14">¥119</p>
+							<p class="p13">本色抑菌懒人布</p>
+							<p class="p14">¥119</p>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="content_five">
+				<div class="item">
+					<div class="item1">
+						<div class="biaoti1">
+							<a><h3 class="name1">居家生活</h3></a>
+						</div>
+							<ul>
+								口碑好物 /
+								主题床品 /
+								抑菌防螨 /
+								春夏好物 /
+								北欧原木 /
+								餐具清单 /
+								床品件套 /
+								查看更多 >
+							</ul>
+					</div>
+					<div class="con0"></div>
+				<div class="con1"></div>
+				<div class="con11"></div>
+				<div class="con111"></div>
+				<div class="con2">
+					<div class="q1">2件8.5折 每满99减15劵</div>
+					<div class="q1">2件8.5折 每满99减15劵</div>
+					<div class="q1">2件8.5折 每满99减15劵</div></div>
+				<div class="conn2">	
+					<p class="q2">AB面乳胶独立弹簧床垫 升级款</p>
+					<p class="q2">AB面乳胶独立弹簧床垫 升级款</p>
+					<p class="q2">AB面乳胶独立弹簧床垫 升级款</p>
+				</div>
+				<div class="conn3">
+					<p class="q4">¥49.9</p>
+					<p class="q4">¥12.9</p>
+					<p class="q4">¥99.9</p>
+				</div>
+				</div>
+			</div>
+			<div class="content_six">
+				<div class="item">
+					<div class="item1">
+						<div class="biaoti1">
+							<a ><h3 class="name1">甄选家</h3></a>
+							<small class="name2">我们在寻找对生活有态度的你</small>
+						</div>
+					</div>
+					<div class="cona"></div>
+					<div class="conb"></div>
+					<div class="conb"></div>
+				</div>
+				
+			</div>
+			<div class="content_seven">
+				<div class="item">
+					<div class="item1">
+						<div class="biaoti1">
+							<a ><h3 class="name1">大家都在说</h3></a>
+							<small class="name2">生活，没有统一标准</small>
+						</div>
+					</div>
+				<div class="conc"></div>
+				<div class="conf"></div>
+				<div class="cong"></div>
+				<div class="cond">男士都市户外夹克 <br>未及时评价，默认好评<p class="cc1">¥69</p></div>
+				<div class="cond">男士都市户外夹克 <br>未及时评价，默认好评<p class="cc1">¥69</p></div>
+				<div class="cond">男士都市户外夹克 <br>未及时评价，默认好评<p class="cc1">¥69</p></div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer_top">
+				<div class="footer_top1">
+					<h4>客户服务</h4>
+					<div class="spana"></div>
+				</div>
+				<div class="footer_top2">
+					<h4>何为严选</h4>
+					<p class="pa">
+						网易原创生活类电商品牌，秉承网易一贯的严谨态度，我们深入世界各地，从源头全程严格把控商品生产环节，力求帮消费者甄选到优质的商品
+					</p>
+					<div class="pb">关注我们
+						<div class="pbbb"></div>
+					</div>
+				</div>
+				<div class="footer_top3">
+					<h4>扫码下载严选APP</h4>
+					<div class="pf"></div>
+					<div class="pc">下载领大额新人红包</div>
+				</div>
+			</div>
+			<div class="footer_bottom">
+				<ul>
+					<li>网易自营电商</li>
+					<li>30天无忧退换货</li>
+					<li>满99元免费邮</li>
+					<li>品质保证</li>
+				</ul>
+				<div class=" pd">
+					<p>关于我们 | 帮助中心 | 售后服务 | 配送与验收 | 商务合作 | 企业采购 | 开放平台 | 搜索推荐 | 友情链接 | 廉政举报</p>
+					<p>食品经营许可证：JY13301080111719 出版物经营许可证：新出发滨字第0132号 妙得ICP证号：ICP 证浙B2-20160106 浙杭食药监械经营备20171029号 营业执照 网易公司版权所有 © 1997-2020 <br><br>
+
+						无线电发射设备销售备案：42202011096855 （浙杭）网械企备字[2019]第00119号 （粤）网械平台备字（2019）第00004号 （粤）-非经营性-2016-0023 <br><br>
+						
+						浙江省网络食品销售第三方平台提供者备案：浙网食A33010009 单用途商业预付卡备案证：330100AAC0024  </p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
