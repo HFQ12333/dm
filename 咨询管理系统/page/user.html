@@ -1,0 +1,254 @@
+<div>
+    <div class="btns">
+      &nbsp;
+        <button type="button" id='add_btn' class="btn btn-primary">新增</button>
+        &nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-danger" id="batch_btn">批量删除</button>
+    </div>
+     <p></p>
+    <table class="table">
+        <thead>
+          <tr style="color:rgb(26, 24, 24)">
+            <th scope="col">编号</th>
+            <th scope="col">用户名称</th>
+            <th scope="col">用户密码</th>
+            <th scope="col">手机号</th>
+            <th scope="col">真实姓名</th>
+            <th scope="col">地址</th>
+            <th scope="col">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+    </table>
+  
+    <!--模态框-->
+    <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="userModalLabel">新增用户</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                      <label for="username"><i style="font-size:30px;float: left;"class="iconfont icon-edit"></i><p style="width:120px;margin-top:10px;background-color:#007bff;border-radius: 10px;color:white;">用户名</p></label>
+                      <input type="email" title="请输入用户名称" class="form-control" id="username" aria-describedby="emailHelp">
+                    </div>
+                      
+                    <div class="form-group">
+                      <label for="password"><i style="font-size:30px;float: left;"class="iconfont icon-edit"></i><p style="width:120px;margin-top:10px;background-color:#007bff;border-radius: 10px;color:white;">密码</p></label>
+                      <input type="password" title="请输入用户密码" class="form-control" id="password" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group">
+                      <label for="telephone"><i style="font-size:30px;float: left;"class="iconfont icon-edit"></i><p style="width:120px;margin-top:10px;background-color:#007bff;border-radius: 10px;color:white;">手机号</p></label>
+                      <input type="number" title="请输入用户手机号" class="form-control" id="telephone" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group">
+                      <label for="realname"><i style="font-size:30px;float: left;"class="iconfont icon-edit"></i><p style="width:120px;margin-top:10px;background-color:#007bff;border-radius: 10px;color:white;">真实姓名</p></label>
+                      <input type="email" title="请输入用户真实姓名" class="form-control" id="realname" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group">
+                        <label for="address"><i style="font-size:30px;float: left;"class="iconfont icon-edit"></i><p style="width:120px;margin-top:10px;background-color:#007bff;border-radius: 10px;color:white;">详细地址</p></label>
+                        <textarea class="form-control" title="请输入用户地址" id="address" aria-label="With textarea"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close_btn">取消</button>
+            <button type="button" class="btn btn-primary" id="true_btn">确定</button>
+            </div>
+        </div>
+        </div>
+    </div>
+  </div>
+  <style>
+  
+  </style>
+  <script>
+    var allData;
+    var id;
+    // 获取token并设置到请求头中
+    var token = localStorage.getItem('token')
+    $.ajaxSetup({
+        headers:{
+            'Authorization':token
+        }
+    })
+  //悬浮样式设置
+  // $('tr').on('mouseover','th',function() {
+  //                 $(event.target).attr('style','background-color:#fff')
+  //             })
+  //             $('tr').on('mouseout','th',function() {
+  //                 $(event.target).attr('style','background-color:#98b8e2')
+  //             })
+  //6.修改按钮
+    $('tbody').on('click','.edit_btn',function(){
+      //6.获取当前行的id
+      id=$(this).closest('tr').find('input').val()
+      // 6.2 显示模态框
+      $('#userModal').modal('show')
+      var editData=allData.filter(function(item){
+        return item.id==id
+       
+      })
+      console.log(editData[0])
+      $('#username').val(editData[0].username)
+      $('#password').val(editData[0].password)
+      $('#telephone').val(editData[0].telephone)
+      $('#realname').val(editData[0].realname)
+      $('#address').val(editData[0].address)
+      
+    })
+    //5.批量删除按钮
+    $('#batch_btn').click(function(){
+      // 5.1获取所有被选中的多选框的id值
+      var inputs=$(':checkbox:checked')
+      // 5.2将id值放入一个数组并转换为字符串
+      var arr=[];
+      Array.from(inputs).forEach(function(item){
+      arr.push(item.value)
+      
+      })
+      // 5.3发送请求
+       $.post('http://101.132.136.165:7788/user/batchDelete',{ids:arr.toString()},function(res){
+      
+        if(res.status==500){
+          alert(res.message)
+        }
+        else{
+          //  5.4刷新数据
+          findAlluser()
+        }
+        
+       })
+      // var res=Array.from(inputs).map(function(item){
+      // return item.value
+      
+      // })
+    })
+    //设置tr悬浮样式
+    $('tbody').on('mouseover','tr',function() {
+      // console.log($(event.target))
+      $(this).attr('style','background-color:white')
+              })
+    $('tbody').on('mouseout','tr',function() {
+     $(this).attr('style','background-color:rgb(30, 75, 109);color:white')
+              })
+    //4.删除按钮 -事件代理
+    $('tbody').on('click','.delete_btn',function(){
+      //4.1 获取当前点击行的id
+      var id=$(this).closest('tr').find('input').val()
+      //4.2 发送请求
+      $.get('http://101.132.136.165:7788/baseUser/deleteById',{
+        id:id
+      },function(res){
+        
+        if(res.status==500){
+          alert(res.message)
+        }
+        else{
+          // 4.3刷新数据
+          findAlluser()
+        }
+      })
+      
+    })
+  // 3.新增/修改按钮
+    $('#true_btn').click(function(){
+      // 3.1获取输入框的值
+         var username= $('#username').val()
+         var password=$('#password').val()
+         var telephone=$('#telephone').val()
+         var realname=$('#realname').val()
+         var address=$('#address').val()
+         //如果id存在，表示该操作为修改
+      if(id){
+       var data={
+         id:id,
+        username:username,
+          password:password,
+          telephone:telephone,
+          realname:realname,
+          address:address,
+       }
+       }
+       //如果id不存在，表示该操作为新增
+       else{
+         var data={
+          username:username,
+          password:password,
+          telephone:telephone,
+          realname:realname,
+          address:address, 
+         }
+      }
+        //  3.2 发送请求
+         $.post('http://101.132.136.165:7788/baseUser/saveOrUpdate',data,function(res){
+         //3.3 关闭模态框
+        $('#userModal').modal('hide')
+         //3.4 刷新数据
+          findAlluser()
+         })
+    })
+   
+    // 2.新增按钮-显示模态框
+    $('#add_btn').click(function() {
+        // 显示模态框
+        $('#userModal').modal('show')
+        $('#username').val('')
+        $('#password').val('')
+        $('#telephone').val('')
+        $('#realname').val('')
+        $('#address').val('')
+  
+        id=''
+    })
+    
+    // 1. 查询所有的栏目
+    function findAlluser(){
+        $.get('http://101.132.136.165:7788/baseUser/findAll',function(res){
+          $('tbody').empty()
+            res.data.forEach(function(item){
+                var newTr = $(`
+                    <tr style="color:rgb(221, 216, 216)">
+                        <td><input type="checkbox" value="`+item.id+`"></td>
+                        <td>`+item.username+`</td>
+                        <td>`+item.password+`</td>
+                        <td>`+item.telephone+`</td>
+                        <td>`+item.realname+`</td>
+                        <td>`+item.address+`</td>
+                        <td>
+                            <button type="button" class="delete_btn btn btn-outline-danger">删除</button>
+                            <button type="button" class="edit_btn btn btn-outline-primary">修改</button>
+                        </td>
+                    </tr>
+                `)
+                $('tbody').append(newTr)
+            })
+  
+            // // 过滤出所有的父栏目
+            // var parent = res.data.filter(function(item){
+            //   console.log(item.parentId)
+            //     return item.parentId==null
+            // })
+            // $('#catgory_parentId').empty()
+                          
+            // var nullOption=$(`<option value=""></option>`)
+            // $('#catgory_parentId').append(nullOption)
+            // parent.forEach(function(item){
+            //     var newOption = $(`
+            //         <option value="`+item.id+`">`+item.name+`</option>
+            //     `)
+            //     $('#catgory_parentId').append(newOption)
+  
+            // })
+            allData=res.data
+        })
+    }    
+    findAlluser()
+  </script>

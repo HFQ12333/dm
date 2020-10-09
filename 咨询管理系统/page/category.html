@@ -1,0 +1,236 @@
+<div>
+  <div class="btns">
+    &nbsp;
+      <button type="button" id='add_btn' class="btn btn-primary">新增</button>
+      &nbsp;&nbsp;&nbsp;
+      <button type="button" class="btn btn-danger" id="batch_btn">批量删除</button>
+  </div>
+   <p></p>
+  <table class="table">
+      <thead>
+        <tr style="color:rgb(26, 24, 24)">
+          <th scope="col">编号</th>
+          <th scope="col">栏目名称</th>
+          <th scope="col">栏目描述</th>
+          <th scope="col">父栏目</th>
+          <th scope="col">操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+  </table>
+
+  <!--模态框-->
+  <div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="categoryModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+          <h5 class="modal-title" id="categoryModalLabel">新增栏目</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+          <div class="modal-body">
+              <form>
+                  <div class="form-group">
+                    <label for="category_name"><i style="font-size:30px;float: left;"class="iconfont icon-edit"></i><p style="width:120px;margin-top:10px;background-color:#007bff;border-radius: 10px;color:white;">栏目名称</p></label>
+                    <input type="email" title="请输入栏目名称" class="form-control" id="category_name" aria-describedby="emailHelp">
+                  </div>
+                    
+                  <div class="form-group">
+                      <label for="catgory_parentId"><i style="font-size:30px;float: left;"class="iconfont icon-edit"></i><p style="width:100px;margin-top:10px;background-color:#007bff;border-radius: 10px;color:white;">父栏目</p></label>
+                      <select class="form-control" id="catgory_parentId">
+                        <option value=""></option>
+                      </select>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="category_desription"><i style="font-size:30px;float: left;"class="iconfont icon-edit"></i><p style="width:120px;margin-top:10px;background-color:#007bff;border-radius: 10px;color:white;">栏目描述</p></label>
+                      <textarea class="form-control" title="请输入栏目描述" id="category_desription" aria-label="With textarea"></textarea>
+                  </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close_btn">取消</button>
+          <button type="button" class="btn btn-primary" id="true_btn">确定</button>
+          </div>
+      </div>
+      </div>
+  </div>
+</div>
+<style>
+
+</style>
+<script>
+  var allData;
+  var id;
+  // 获取token并设置到请求头中
+  var token = localStorage.getItem('token')
+  $.ajaxSetup({
+      headers:{
+          'Authorization':token
+      }
+  })
+//悬浮样式设置
+// $('tr').on('mouseover','th',function() {
+//                 $(event.target).attr('style','background-color:#fff')
+//             })
+//             $('tr').on('mouseout','th',function() {
+//                 $(event.target).attr('style','background-color:#98b8e2')
+//             })
+//6.修改按钮
+  $('tbody').on('click','.edit_btn',function(){
+    //6.获取当前行的id
+    id=$(this).closest('tr').find('input').val()
+    // 6.2 显示模态框
+    $('#categoryModal').modal('show')
+    var editData=allData.filter(function(item){
+      return item.id==id
+     
+    })
+    console.log(editData[0])
+    $('#category_name').val(editData[0].name)
+    $('#catgory_parentId').val(editData[0].parentId)
+    $('#category_desription').val(editData[0].description)
+    
+  })
+  //5.批量删除按钮
+  $('#batch_btn').click(function(){
+    // 5.1获取所有被选中的多选框的id值
+    var inputs=$(':checkbox:checked')
+    // 5.2将id值放入一个数组并转换为字符串
+    var arr=[];
+    Array.from(inputs).forEach(function(item){
+    arr.push(item.value)
+    
+    })
+    // 5.3发送请求
+     $.post('http://101.132.136.165:7788/category/batchDelete',{ids:arr.toString()},function(res){
+    
+      if(res.status==500){
+        alert(res.message)
+      }
+      else{
+        //  5.4刷新数据
+        findAllCategory()
+      }
+      
+     })
+    // var res=Array.from(inputs).map(function(item){
+    // return item.value
+    
+    // })
+  })
+  //设置tr悬浮样式
+  $('tbody').on('mouseover','tr',function() {
+    // console.log($(event.target))
+    $(this).attr('style','background-color:white')
+            })
+  $('tbody').on('mouseout','tr',function() {
+   $(this).attr('style','background-color:rgb(30, 75, 109);color:white')
+            })
+  //4.删除按钮 -事件代理
+  $('tbody').on('click','.delete_btn',function(){
+    //4.1 获取当前点击行的id
+    var id=$(this).closest('tr').find('input').val()
+    //4.2 发送请求
+    $.get('http://101.132.136.165:7788/category/deleteById',{
+      id:id
+    },function(res){
+      
+      if(res.status==500){
+        alert(res.message)
+      }
+      else{
+        // 4.3刷新数据
+        findAllCategory()
+      }
+    })
+    
+  })
+// 3.新增/修改按钮
+  $('#true_btn').click(function(){
+    // 3.1获取输入框的值
+       var name= $('#category_name').val()
+       var parentId=$('#catgory_parentId').val()
+       var description=$('#category_desription').val()
+       //如果id存在，表示该操作为修改
+    if(id){
+     var data={
+      id:id,
+      name:name,
+      parentId:parentId,
+      description:description
+     }
+     }
+     //如果id不存在，表示该操作为新增
+     else{
+       var data={
+         name:name,
+         parentId:parentId,
+         description:description
+         
+       }
+    }
+      //  3.2 发送请求
+       $.post('http://101.132.136.165:7788/category/saveOrUpdate',data,function(res){
+       //3.3 关闭模态框
+      $('#categoryModal').modal('hide')
+       //3.4 刷新数据
+        findAllCategory()
+       })
+  })
+ 
+  // 2.新增按钮-显示模态框
+  $('#add_btn').click(function() {
+      // 显示模态框
+      $('#categoryModal').modal('show')
+       $('#category_name').val('')
+       $('#catgory_parentId').val('')
+       $('#category_desription').val('')
+
+      id=''
+  })
+  
+  // 1. 查询所有的栏目
+  function findAllCategory(){
+      $.get('http://101.132.136.165:7788/category/findAll',function(res){
+        $('tbody').empty()
+          res.data.forEach(function(item){
+              var newTr = $(`
+                  <tr style="color:rgb(221, 216, 216)">
+                      <td><input type="checkbox" value="`+item.id+`"></td>
+                      <td>`+item.name+`</td>
+                      <td>`+item.description+`</td>
+                      <td>`+item.parentId+`</td>
+                      <td>
+                          <button type="button" class="delete_btn btn btn-outline-danger">删除</button>
+                          <button type="button" class="edit_btn btn btn-outline-primary">修改</button>
+                      </td>
+                  </tr>
+              `)
+              $('tbody').append(newTr)
+          })
+
+          // 过滤出所有的父栏目
+          var parent = res.data.filter(function(item){
+            console.log(item.parentId)
+              return item.parentId==null
+          })
+          $('#catgory_parentId').empty()
+                        
+          var nullOption=$(`<option value="" selected></option>`)
+          $('#catgory_parentId').append(nullOption)
+          parent.forEach(function(item){
+              var newOption = $(`
+                  <option value="`+item.id+`">`+item.name+`</option>
+              `)
+              $('#catgory_parentId').append(newOption)
+
+          })
+          allData=res.data
+      })
+  }    
+  findAllCategory()
+</script>

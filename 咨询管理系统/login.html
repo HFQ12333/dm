@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <style>
+         body{
+	     background:url("image/denglu.jpg") no-repeat center center;    
+	     background-size:cover;
+       background-attachment:fixed;
+}
+  .nav{
+	       width:50%; 
+		   height:100px; 
+			 /* background-color: rgb(30, 75, 109); */
+			 font-size:20px;
+			 text-align:left;
+             opacity: 0.8;
+             
+		   
+}
+  .nav b{
+		     margin-left:16%; 
+				 margin-top:30px; 
+				 color: cornsilk; 
+                 font-family:"华文新魏";
+                 
+}
+	.centent{
+	         width:400px; 
+			     height:300px; 
+			     margin-left:50%; 
+			     margin-top:100px; 
+			     background-color:rgb(144, 149, 151);
+                 border-radius: 15px;
+                 box-shadow: rgb(30, 75, 109)0px 10px 10px inset;
+			 
+}
+	.centent1{
+	          width:400px; 
+			      height:50px; 
+			      text-align:center;
+			      line-height:45px;
+			      color:#eff1f8;
+			      font-family:"华文新魏";
+			      font-size:30px;
+			      background-color:rgb(30, 75, 109);			 
+}
+	.centent2{
+	          width:400px; 
+			      height:140px;
+			      margin-top:30px;
+			     
+}
+	.centent2 img{
+		            width:40px; 
+								height:35px; 
+								float:left; 
+								opacity: 0.7; 
+								margin-top:25px; 
+								margin-left:50px;
+}
+	.centent2 input{
+		              font-size:15px; 
+									margin-top:25px; 
+									background-color:rgb(30, 75, 109);
+                                    color:white;
+}
+	.input1{
+		      margin-top:5px; 
+					text-align:center;
+}
+	.input1 input,button{ 
+		            font-size:20px;
+                    border-radius: 10px; 
+					background-color:rgb(30, 75, 109);
+                    color: honeydew;
+
+}
+	.bottom{
+		      width:400px; 
+	        margin-top:20px;
+			    height:114px; 
+}
+.bottom img{
+	          width: 400px;
+					  height:20px;
+	          opacity:0.4;
+						
+}
+  </style>
+    </style>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <!-- <b>您好，请登录</b>
+        <hr width="28%"; height="1"; color="black"; ></hr>
+        <b>业精于勤，荒于嬉；行成于思，毁于随。</b> -->
+       
+        
+</div>
+<div class="centent">
+     <div class="centent1"><b>用户登录</b></div>
+<div class="centent2">
+       <div class="img"><img src="image/logo.jpg"/>
+        <input id="username" type="text" name="" value="" placeholder="用户名"  style="width:200px; height:30px;" />
+   </div>
+        <div class="img"><img src="image/password.jpg"/>
+        <input type="text" id="password"name="" value="" placeholder="密码"  style="width:200px; height:30px;" />
+   </div>
+   </div>
+<div class="input1">
+    <button>登录</button>
+    <p>登录用户名:admin1 密码:123321</p>
+     
+</div>
+<div class="bottom">
+    <!-- <img src="image/1.jpg"/> -->
+</div>
+
+</div>
+    <!-- <form>
+       <label for="username">用户名：</label> <input type="text" placeholder="请输入用户名" id="username">
+       <label for="password">密码：</label> <input type="text" placeholder="请输入密码" id="password">
+    </form>
+    <button>登录</button> -->
+
+    <script>
+    $('button').click(function(){
+        // 1、分别获取输入框的值 获取用户名和密码框的用户输入的值
+        var username=$('#username').val()
+        var password=$('#password').val()
+
+        // 请求登录接口
+        $.ajax({
+            url:'http://101.132.136.165:7788/user/login',
+            method:'POST',
+            data:JSON.stringify({
+                username:username,
+                password:password,
+                type:'customer'
+            }),
+            contentType:'application/json',
+            success:function(res){
+               
+               if(res.status==500){
+                   alert(res.message)
+               }
+                else{
+                    $.ajaxSetup({
+                    headers:{
+                        "Authorization":res.data.token
+                    }
+                })
+                // 将token设置到浏览器
+                localStorage.setItem('token',res.data.token)
+                $.get('http://101.132.136.165:7788/user/info',{token:res.data.token
+                },function(res){
+                    // 将用户信息存储到浏览器
+                    localStorage.setItem('userInfo',JSON.stringify(res.data))
+                })
+                // 页面跳转
+                setTimeout(function(){location.href='http://101.132.136.165/html/资讯看点/7-home.html'},2000)
+                }
+
+            }
+
+        })
+    })
+    </script>
+</body>
+</html>
