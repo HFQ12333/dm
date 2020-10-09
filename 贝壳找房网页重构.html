@@ -1,0 +1,693 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>贝壳网</title>
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1969802_5yf6exr2nhf.css">
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1969802_rrxqi09qlo.css">
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1969802_ph3si38ki2o.css">
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		html,body,.main{
+			width: 100%;
+			height: 100%;
+		}
+		.header{
+			width: 100%;
+			height: 566px;
+			background-image: url(../html_day01/image/1122.jpg);
+			background-position: center 0;
+			position: relative;
+		}
+		.header_top_left{
+			position: absolute;
+			margin-left: 60px;
+			margin-top: 40px;
+			background-image: url(../html_day01/image/1.png);
+			background-position: -72px 0;
+			width: 94px;
+			height: 34px;
+			display: inline-block;
+		}
+		.exchange{
+			position: absolute;
+			height: 24px;
+			width: 39px;
+			border-radius: 14px;
+			font-size: 12px;
+			border: 2px solid #fff;
+			cursor: pointer;
+			padding: 0 8px;
+			line-height: 24px;
+			text-align: center;
+			color: #fff;
+			margin-top: 5px;
+			margin-left: 120px;
+			display: inline-block;
+			text-decoration: none;
+		}
+		.i1{
+			background-image: url(../html_day01/image/1.png);
+			background-position: -133px -34px;
+			width: 10px;
+			height: 12px;
+			display: inline-block;
+			position: relative;
+			top: 1px;
+		}
+		.clickdata,a{
+			color: #fff;
+			font-size: 16px;
+			font-weight: 700;
+			text-decoration: none;
+			float: left;
+			margin-left: 10px;
+			margin-top: 20px;	
+			list-style: none;
+		}
+		.header_top_right{
+			position: absolute;
+			margin-left: 650px;
+		}
+		.header_top_right1{
+			background-image: url(../html_day01/image/1.png);
+			background-position: -72px -34px;
+			width: 26px;
+			height: 26px;
+			margin-top: 36px;
+			margin-left: 645px;
+		}
+		.header_wrap{
+			width: 1150px;
+			height: 341px;
+			left: 0px;
+			right: 0px;
+			top: 0px;
+			bottom: 0px;
+			margin: auto;
+			position: absolute;
+		}
+		.title_small{
+			padding-top: 80px;
+			float: left;
+			font-size: 28px;
+			font-weight: 400;
+			color: white;
+		}
+		.title_big{
+			font-size: 66px;
+			color: #fff;
+			font-weight: 600;
+			letter-spacing: -2.4px;
+			text-align: left;
+			margin-top: 120px;
+		}
+		.menu,ul{
+			font-size: 16px;
+			color: #fff;
+			font-weight: 700;
+			display: inline-block;
+			padding-right: 20px;
+			cursor: pointer;
+			list-style: none;
+			padding-top: 15px;
+		}
+		.search,input{
+			width: 590px;
+			height: 50px;
+			font-size: 16px;
+			padding-left: 18px;
+			border-radius: 5px;
+			border-style: none;
+			margin-top: 10px;
+			margin-left: -10px;
+		}
+		.tubiao{
+			height: 50px;
+			width: 80px;
+			position: absolute;
+			background-color: #3072f6;
+			margin-left: 520px;
+			display: inline-block;
+			margin-top: -50px;
+		}
+		.ditu{
+			font-size: 16px;
+			float: right;
+			color: #666666;	
+			margin-left: 470px;
+			margin-top: -35px;
+			position: absolute;
+		}
+		.search3{
+			float: right;
+			display: inline-block;
+			margin-right: 150px;
+			margin-top: -50px;
+			color: black;
+			font-size: 20px;
+		}
+		.header_bottom1{
+			position: absolute;
+			margin-left: 200px;
+			margin-top: 500px;
+			font-weight: unset;
+			font-size: 14px;
+		}
+	/*	.content{
+			width: 100%;
+			background-color: red;
+			position: relative;
+			height: 1500px;
+		}
+		.content_top{
+			width: 75%;
+			height: 500px;
+			left: 0px;
+			right: 0px;
+			margin: auto;
+			padding-top: 80px;
+			position: absolute;
+			background-color: blue;*/
+		}
+		.top1{
+			float: left;
+			font-size: 36px;
+			font-weight: 600;
+		}
+		.top2{
+			margin-top: -10px;
+		}
+		.a5{
+			float: right;
+			margin-top: -30px;
+			color: blue;
+		}
+		.a5:hover{
+			text-decoration: underline;
+		}
+		.picture1{
+			width: 265px;
+			height: 205px;
+			border-radius: 4px;
+			background-image: url(../html_day01/image/4.jpg);
+			margin-top: 30px;
+		}
+		.picture2{
+			width: 86px;
+			height: 30px;
+			border-radius: 0px;
+			background-image: url(../html_day01/image/5.png);
+			background-size: 100%;
+		}
+		.pp1{
+			font-size: 18px;
+			font-weight: 700;
+			color: #222;
+			margin-top: 20px;
+		}
+		.pp2{
+			font-size: 12px;
+			margin-top: 10px;
+		}
+		.pp3{
+			font-size: 16px;
+			font-weight: 700;
+			color: #fa5741;
+			margin-left: 220px;
+			margin-top: -18px;
+		}
+		.footer{
+			width: 75%;
+			height: 440px;
+			left: 0px;
+			right: 0px;
+			margin: auto;
+			border: 1px solid silver;
+			border-left: none;
+			border-right: none;
+			border-bottom: none;
+			position: absolute;
+		}
+		.footer_top{
+			width: 450px;
+			height: 80px;
+			margin-top: 40px;
+			display: flex;
+		}	
+		.footer_top>div:first-child{
+			flex: 1;
+		}
+		.footer_top>div:nth-child(2){
+			flex: 1;
+		}
+		.footer_top>div:last-child{
+			flex: 1;
+		}
+		.top5{
+			float: left;
+			border: 1px solid silver;
+			font-size: 18px;
+			padding: 20px 20px;
+			margin-left: 0px;
+			margin-top: -13px;
+			color: black;
+		}
+		.footer_center{
+			width: 600px;
+			height: 30px;
+			display: flex;
+			justify-content: space-around;
+			font-size: 14px;
+		}
+		.footer_one{
+			width: 1000px;
+			height: 30px;
+			display: flex;
+			justify-content: space-between;
+			font-size: 14px;
+		}
+		.footer_two{
+			width: 1000px;
+			height: 30px;
+			display: flex;
+			justify-content: space-between;
+			font-size: 14px;
+		}
+		.footer_three,picture111{
+			width: 110px;
+			height: 40px;
+			background-size: 100% 100%;
+			background-image: url(../html_day01/image/招商银行.png);
+			float: left;
+		}
+		.footer_four{
+			margin-top: 40px;
+			width: 1200px;
+			height: 20px;
+			display: flex;
+			justify-content: space-between;
+			font-size: 14px;
+		}
+		.footer_five{
+			font-size: 14px;
+		}
+		.footer_six{
+			font-size: 16px;
+			font-weight: bold;
+			color: blue;
+			float: right;
+			/*position: absolute;*/
+			margin-top: -320px;
+		}
+		.content{
+			width: 100%;
+			margin-top: -165px;
+			}
+		.content_one{
+			height: 500px;
+		}
+		.content_two{
+			height: 500px;
+		}
+		.content_three{
+			height: 500px;
+		}
+		.content>div{
+			position: relative;
+		}
+		.item{
+			width: 1200px;
+			height: 500px;
+			left: 0px;
+			right: 0px;
+			top: 0px;
+			bottom: 0px;
+			margin: auto;
+			position: absolute;
+			/*background-color: red;*/
+		}
+		.item1{
+			height: 90px;
+			font-size: 35px;
+			padding-top: 115px;
+			font-weight: 600;
+
+		}
+		.item2{
+			height: 410px;
+			/*background-color: yellow;*/
+			overflow: hidden;
+		}
+		.item3{
+			font-size: 16px;
+			font-weight: normal;
+		}
+		.item4{
+			color: blue;
+			float: right;
+			font-size: 17px;
+			font-weight: normal;
+		}
+		.item5{
+			width: 265px;
+			height: 205px;
+			background-image: url(../html_day01/image/f1.jpg);
+			background-size: 100% 100%;
+			border-radius: 5px;
+			float: left;
+		}
+		.item6{
+			width: 265px;
+			height: 205px;
+			background-image: url(../html_day01/image/f2.jpg);
+			background-size: 100% 100%;
+			border-radius: 5px;
+			float: left;
+			margin-left: 45px;
+		}
+		.item7{
+			width: 265px;
+			height: 205px;
+			background-image: url(../html_day01/image/f3.jpg);
+			background-size: 100% 100%;
+			border-radius: 5px;
+			float: left;
+			margin-left: 45px;
+		}
+		.item8{
+			width: 265px;
+			height: 205px;
+			background-image: url(../html_day01/image/f4.jpg);
+			background-size: 100% 100%;
+			border-radius: 5px;
+			float: left;
+			margin-left: 45px;
+		}
+		.item9{
+			display: inline-block;
+			font-weight: bold;
+		}
+		.item10{
+			display: inline-block;
+			margin-left: 240px;
+			font-weight: bold;
+		}
+		.item11{
+			display: inline-block;
+			margin-left: 175px;
+			font-weight: bold;
+		}
+		.item12{
+			display: inline-block;
+			margin-left: 175px;
+			font-weight: bold;
+		}
+		.item133{
+			display: flex;
+			justify-content: space-around;
+			color: red;
+			font-weight: bold;
+		}
+		.item13{
+			flex: 1.1;
+		}
+		.item14{
+			flex: 1.1;
+		}
+		.item15{
+			flex: 1.1;
+		}
+		.item16{
+			flex: 0.9;
+		}
+		.a5-1{
+			width: 86px;
+			height: 30px;
+			background-image: url(../html_day01/image/5.png);
+			background-size: 100%;
+		}
+		.a6-1{
+			width: 86px;
+			height: 30px;
+			background-image: url(../html_day01/image/5.png);
+			background-size: 100%;
+
+		}
+		.a7-1{
+			width: 86px;
+			height: 30px;
+			background-image: url(../html_day01/image/5.png);
+			background-size: 100%;
+
+		}
+		.a8-1{
+			width: 86px;
+			height: 30px;
+			background-image: url(../html_day01/image/5.png);
+			background-size: 100%;
+		}
+		.foo1{
+			width: 139px;
+			height: 40px;
+			background-image: url(../html_day01/image/foo2.jpg);
+			background-size: 100%;
+			float: left;
+			margin-left: 60px;
+		}
+		.foo2{
+			width: 139px;
+			height: 40px;
+			background-image: url(../html_day01/image/中国光大银行.png);
+			background-size: 100%;
+			float: left;
+			margin-left: 60px;
+		}
+		.foo3{
+			width: 139px;
+			height: 20px;
+			background-image: url(../html_day01/image/华夏银行背景分行.png);
+			background-size: 100%;
+			float: left;
+			margin-left: 60px;
+		}
+		.foo8{
+			width: 20px;
+			height: 20px;
+			background-image: url(../html_day01/image/foo5.png);
+			background-size: 100%;
+			/*position: absolute;*/
+			margin-bottom: -20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="header">
+			<div class="header_top">
+				<div class="header_top_right">
+					<ul>
+						<li class="clickdata"><a href="">二手房</a></li>
+						<li class="clickdata"><a href="">新房</a></li>
+						<li class="clickdata"><a href="">租房</a></li>
+						<li class="clickdata"><a href="">海外</a></li>
+						<li class="clickdata"><a href="">小区</a></li>
+						<li class="clickdata"><a href="">百科</a></li>
+						<li class="clickdata"><a href="">我是业主</a></li>
+						<li class="clickdata"><a href="">贝壳研究院</a></li>
+						<li class="clickdata"><a href="">下载APP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+						<li class="clickdata"><a href="">登录/注册</a></li>
+					</ul>
+				</div>
+				<div class="header_top_left">
+					<a href="http://www.ke.com/" title="贝壳找房" class="logo" target="_self"></a>
+					<a href="http://www.ke.com/city" class="exchange"><i class="i1"></i>南京</a>
+				</div>
+			</div>
+			<div class="header_center">
+				<div class="header_wrap">
+					<div class="title_small">
+						<span>要找真房源 还是贝壳全</span>
+					</div>
+					<div class="title_big">
+						<span>开始寻找属于你的家</span>
+					</div>
+					<div class="menu">
+						<ul><li class="tab check"><span>找二手房</span></li></ul>
+						<ul><li class="tab"><span>找新房</span></li></ul>
+						<ul><li class="tab"><span>找租房</span></li></ul>
+						<ul><li class="tab"><span>找小区</span></li></ul>
+					</div>
+					<div class="search">
+						<div class="search2">
+						<input type="text" placeholder="请输入区域、商圈小区名开始找房">
+						<a href="" class="ditu">地图</a>
+						</div>
+						<div class="search3">
+							<i class="iconfont icon-ditudingwei" style="position: absolute;line-height: 50px;"></i>
+						</div>
+						<div class="tubiao"><i class="iconfont icon-fangdajing" style="position: absolute;line-height: 50px;font-size: 30px;padding-left: 25px;">
+						</i></div>
+						<!-- <div class="search4">
+							<i class="iconfont icon-sanjiaoxing" style="position: absolute;left: 200px;color: red;font-size: 20px;background-color: white;background-size: 100%;top:50px;"></i>
+						</div> -->
+					</div>
+				</div>
+				</div>
+				<div class="header_bottom">
+				<ul class="header_bottom1"><li>南京在售二手房 94412套</li></ul>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="content">
+			<div class="content_one">
+				<div class="item">
+					<div class="item1">二手好房
+						<div class="item3">好房源那么多,我们为你精选</div>
+						<div class="item4">更多南京二手房</div>
+					</div>
+					<div class="item2">
+						<div class="item5">
+							<div class="a5-1"></div>
+						</div>
+						<div class="item6">
+							<div class="a6-1"></div>
+						</div>
+						<div class="item7">
+							<div class="a7-1"></div>
+						</div>
+						<div class="item8">
+							<div class="a8-1"></div>
+						</div>
+						<div class="item9"><p>秦淮·秦虹</p><p>节制闸路</p></div>
+						<div class="item10"><p>江宁·九龙湖</p><p>保利中央公园东苑</p></div>
+						<div class="item11"><p>江宁·麒麟镇</p><p>东郊小镇第四街区</p></div>
+						<div class="item12"><p>秦淮·新街口</p><p>天空之都</p></div>
+						<div class="item133">
+							<div class="item13">235万</div>
+							<div class="item14">205万</div>
+							<div class="item15">200万</div>
+							<div class="item16">335万</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content_two">
+				<div class="item">
+					
+						<div class="item1">小区精选
+						<div class="item3">纵览小区，恋上这座城</div>
+						<div class="item4">更多南京小区</div>
+					</div>
+					<div class="item2">
+						<div class="item5">
+							<div class="a5-1"></div>
+						</div>
+						<div class="item6">
+							<div class="a6-1"></div>
+						</div>
+						<div class="item7">
+							<div class="a7-1"></div>
+						</div>
+						<div class="item8">
+							<div class="a8-1"></div>
+						</div>
+						<div class="item9"><p>秦淮·秦虹</p><p>节制闸路</p></div>
+						<div class="item10"><p>江宁·九龙湖</p><p>保利中央公园东苑</p></div>
+						<div class="item11"><p>江宁·麒麟镇</p><p>东郊小镇第四街区</p></div>
+						<div class="item12"><p>秦淮·新街口</p><p>天空之都</p></div>
+						<div class="item133">
+							<div class="item13">135万</div>
+							<div class="item14">285万</div>
+							<div class="item15">205万</div>
+							<div class="item16">95万</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="content_three">
+				<div class="item">
+							<div class="item1">优选新房
+						<div class="item3">真实信息准确同步，楼盘动态一手掌握</div>
+						<div class="item4">更多南京租房</div>
+					</div>
+					<div class="item2">
+						<div class="item5">
+							<div class="a5-1"></div>
+						</div>
+						<div class="item6">
+							<div class="a6-1"></div>
+						</div>
+						<div class="item7">
+							<div class="a7-1"></div>
+						</div>
+						<div class="item8">
+							<div class="a8-1"></div>
+						</div>
+						<div class="item9"><p>秦淮·秦虹</p><p>节制闸路</p></div>
+						<div class="item10"><p>江宁·九龙湖</p><p>保利中央公园东苑</p></div>
+						<div class="item11"><p>江宁·麒麟镇</p><p>东郊小镇第四街区</p></div>
+						<div class="item12"><p>秦淮·新街口</p><p>天空之都</p></div>
+						<div class="item133">
+							<div class="item13">335万</div>
+							<div class="item14">435万</div>
+							<div class="item15">135万</div>
+							<div class="item16">295万</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<div class="footer">
+			<div class="footer_top">
+			<div><ul><li><a href="" class="top5">开放平台</a></li></div>
+			<div><ul><li><a href="" class="top5">网站地图</a></li></div>
+			<div><ul><li><a href="" class="top5">了解贝壳</a></li></div>
+			</ul>
+			</div>
+			<div class="footer_center">
+				<div>二手房</div>
+				<div>热门小区</div>
+				<div>热门房产</div>
+				<div>热门新房</div>
+				<div>小区二手房</div>
+				<div>合作与友情链接</div>
+				<div>贝壳规则中心</div><br>
+			</div>
+			<div class="footer_one">
+				<div>北京新房  长春新房  成都新房  重庆新房  长沙新房  大连新房  佛山新房  广州新房  合肥新房  杭州新房  济南新房  昆明新房  南京新房  青岛新房 
+				</div>
+			</div>
+			<div class="footer_two">上海新房  石家庄新房  苏州新房  沈阳新房  深圳新房  天津新房
+			</div>
+			<div class="footer_three">
+				<div class="picture111"></div>
+			</div>
+			<div class="foo1"></div>
+			<div class="foo2"></div>
+			<div class="foo3"></div>
+			<div class="footer_four">
+				<div>天津小屋信息科技有限公司 | 地址：天津经济技术开发区南港工业区综合服务区办公楼C座一层112室09单元 | 电话：10106188 | 津ICP备18000836号 | © Copyright 2020 ke.com版权</div>
+			</div>
+			<div class="footer_five">
+				<div>所有 | 营业执照 | ICP证 | 网络文化经营许可证<br> 
+				违法和不良信息举报电话：010-86440676 | 违法和不良信息举报邮箱：jubaoyouxiang@ke.com 
+				<div class="foo8"></div>
+ 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;津公网安备 12010602120282号 | 网上有害信息举报专区</div>
+			</div>
+			<div class="footer_six">官方客服咨询</div>
+		</div>
+	</div>
+</body>
+</html>
