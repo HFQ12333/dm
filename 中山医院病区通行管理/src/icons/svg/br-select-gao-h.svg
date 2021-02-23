@@ -1,0 +1,16 @@
+<svg width="260" height="260" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="159.575715" height="159.575715" id="canvas_background" fill="none"/>
+  <g id="canvasGrid" display="none">
+   <rect id="svg_2" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path fill="#cccccc" stroke="#000" stroke-width="0" stroke-opacity="null" d="m2.366081,130.000012l0,0c0,-70.522454 57.686336,-127.692196 128.84605,-127.692196l0,0c34.17208,0 66.944572,13.453247 91.1079,37.400179c24.163319,23.946931 37.738114,56.425947 37.738114,90.292017l0,0c0,70.522437 -57.686326,127.692178 -128.846014,127.692178l0,0c-71.159714,0 -128.84605,-57.16975 -128.84605,-127.692178zm128.84605,-127.692196l0,255.384374m-128.84605,-127.692178l257.692064,0" id="svg_3"/>
+  <text fill="#ffffff" stroke-width="0" x="114.979469" y="148.504003" id="svg_1" font-size="14" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" transform="matrix(12.13554333272155,0,0,10.109195158278776,-1350.2523112464173,-1322.1478800855898) " stroke="#000" opacity="0.99">高</text>
+ </g>
+</svg>
