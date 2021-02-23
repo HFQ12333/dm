@@ -1,0 +1,94 @@
+/* 1. 菜单样式重置 */
+/* 1.1 菜单项行高 */
+.el-submenu__title,
+.el-menu-item {
+  height: 48px !important;
+  line-height: 48px !important;
+}
+/* 1.2 菜单项激活背景色 */
+#app .sidebar-container .el-submenu .el-menu-item.is-active,
+.el-menu-item.is-active {
+  background-color: #34404e !important;
+}
+#app .sidebar-container .is-active > .el-submenu__title {
+  color:#bcc4c6 !important;
+}
+/*按钮容器*/
+.btns {
+  margin-bottom: .5em;
+}
+/*分页容器*/
+.page {
+  margin-top: .5em;
+}
+.btns .el-form-item ,
+.btns .el-form-item--small.el-form-item {
+  margin-bottom: 0;
+}
+td .el-button--mini {
+  padding: 0;
+}
+.demo-table-expand {
+  font-size: 0;
+}
+.demo-table-expand label {
+  width: 100px;
+  color: #99a9bf;
+}
+.demo-table-expand .el-form-item {
+  margin-right: 0;
+  margin-bottom: 0;
+  width: 50%;
+}
+
+/* 自定义模态框样式类 */
+.el-dialog__body img {
+  width:100% !important;
+}
+.customer_modal .el-dialog__header {
+  background-color: #4fbc8d;
+  /* border-bottom: 1px solid #ededed; */
+}
+
+.customer_modal .el-dialog__header .el-dialog__title {
+  color: #ffffff;
+}
+
+.customer_modal .el-dialog__footer {
+  border-top: 1px solid #4fbc8d;
+}
+.customer_modal .el-dialog__close, 
+.customer_modal .el-dialog__headerbtn:hover .el-dialog__close{
+  color: #ffffff;
+}
+
+#el-drawer__title {
+  border-bottom: 1px solid#ededed;
+  padding-bottom: 1em;
+  margin-bottom: 0;
+}
+.el-drawer__body {
+  overflow-y: scroll;
+}
+
+
+.tips {
+  font-size: 12px;
+  color: red;
+  line-height: 3em;
+}
+
+/* 表格 */
+          
+.el-table .prop {
+  display: flex;
+  line-height: 1.8em;
+}
+.el-table .prop > .prop_name {
+  font-weight: bold;
+  width: 80px;
+}
+.el-table .prop > .prop_name::after {
+  content: ":";
+}
+
